@@ -15,3 +15,18 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm test
+  fake-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code from repo
+        uses: actions/checkout@v3
+      - name: Instal nodeJs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependecies
+        run: npm ci
+      - name: Build Project
+        run: npm run Build
+      - name: fake deploy
+        run: echo"Deploy project" 
