@@ -28,6 +28,6 @@ jobs:
       - name: Install dependecies
         run: npm ci
       - name: Build Project
-        run: npm run Build
+        run: npm run build
       - name: fake deploy
-        run: echo"Deploy project" 
+        run: echo "Deploy project" 
